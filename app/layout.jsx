@@ -1,13 +1,15 @@
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
-import Navbar from '../components/navbar';
-import Provider from '@/components/provider';
+import Navbar from "../components/navbar";
+import Provider from "@/components/provider";
+
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: 'Lustie Manager',
-  description: 'Enpower your task management with Lustie',
+  title: "Lustie Manager",
+  description: "Enpower your task management with Lustie",
   image:
-    'https://png.pngtree.com/png-vector/20190628/ourmid/pngtree-task-icon-for-your-project-png-image_1520262.jpg',
+    "https://png.pngtree.com/png-vector/20190628/ourmid/pngtree-task-icon-for-your-project-png-image_1520262.jpg",
 };
 
 const RootLayout = ({ children }) => {
@@ -25,6 +27,7 @@ const RootLayout = ({ children }) => {
           <main className="app">
             <Navbar />
             {children}
+            <Analytics />
           </main>
         </Provider>
       </body>
